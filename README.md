@@ -44,8 +44,18 @@ Layered Data Processing: Organizes data processing into distinct Bronze, Silver,
 
 ## Ok! Let's go to talk about the Project!
 
+### Security
+
+How to maintain security when connecting to the source and extracting data? It is crucial to securely manage user credentials to prevent sensitive information, such as connection details to your transactional server, from being exposed or unprotected.
+
+Using Azure Key Vault, we register access credentials to the transactional server, such as username and password, only once and in a single location. 
+
+This also simplifies its integration with other cloud services, crucially ensuring security, monitoring access, and safeguarding sensitive data centrally.
+![Key Vault](https://github.com/LuisGustavoCorrea/Azure-End-To-End-Data-Engineering/assets/18196788/c31a19da-0000-4bdd-be41-dc236bf944be)
 
 ### Data Source
+Now, with the secure connection between the source and the cloud established, let's move on to the next step.
+
 
 How to automate getting various tables and load this on Data Lake?
 
@@ -53,8 +63,7 @@ How to automate getting various tables and load this on Data Lake?
 
 ## Data Factory
 
-### Ingestion and Orchestration
-
+### Ingestion
 
 Using Data Factory, I parameterized a Lookup activity to execute a query in local database metadata and retrieve tables with the SalesLT schema. 
 
@@ -73,4 +82,4 @@ Within this loop, we read each database table using the list as a parameter and 
 
 ![data factory flow](https://github.com/LuisGustavoCorrea/Azure-End-To-End-Data-Engineering/assets/18196788/560b9ef0-2a86-46c1-9326-6681b2d3301d)
 ![Data Lake gen 2](https://github.com/LuisGustavoCorrea/Azure-End-To-End-Data-Engineering/assets/18196788/affe9536-a634-4b11-9779-3ad431b348d0)
-![Key Vault](https://github.com/LuisGustavoCorrea/Azure-End-To-End-Data-Engineering/assets/18196788/c31a19da-0000-4bdd-be41-dc236bf944be)
+
