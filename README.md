@@ -106,10 +106,13 @@ Check the codes and transformations performed in the notebooks inside the Databr
 
 Within Azure Synapse Analytics, I created a SQL Serverless instance to be used for data consumption in the Gold layer.
 
+
 How do we consume the data?
 
 
 Views were created from the final tables in the Gold layer, which are in Delta format.
+
+![Azure Synapse](https://github.com/LuisGustavoCorrea/Azure-End-To-End-Data-Engineering/assets/18196788/4942ad0e-7d27-462d-a6eb-6aaf8bb02334)
 
 ### Why?
 
